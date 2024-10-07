@@ -1063,5 +1063,9 @@ canvas{
   text-decoration: none;
   color: #ffffff;
 }
-
+.projecttwo .proj-imgbx img{
+  justify-content: center;
+  width: 415px;
+  height: 304px;
+}
 

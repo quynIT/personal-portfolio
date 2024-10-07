@@ -3,6 +3,7 @@ import { ProjectCard } from "./ProjectCard";
 import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
+import projImg4 from "../assets/img/virtual-gallery.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -28,6 +29,14 @@ export const Projects = () => {
       imgUrl: projImg3,
       Url: "https://github.com/quynIT/Job-Finder"
     },
+  ];
+  const project2 = [
+    {
+      title: "Virtual Gallery",
+      description: "Design & Development",
+      imgUrl: projImg4,
+      Url: "https://virtual-gallery-phi.vercel.app/"
+    }
   ];
 
   return (
@@ -68,7 +77,18 @@ export const Projects = () => {
                       </Row>
                     </Tab.Pane>
                     <Tab.Pane eventKey="second">
-                      <h2>New projects coming soon.. 🤠</h2>
+                    <Row className="projecttwo">
+                        {
+                          project2.map((project, index) => {
+                            return (
+                              <ProjectCard
+                                key={index}
+                                {...project}
+                                />
+                            )
+                          })
+                        }
+                      </Row>
                     </Tab.Pane>
                     <Tab.Pane eventKey="third">
                       <h2>New projects coming soon.. 🤠</h2>
